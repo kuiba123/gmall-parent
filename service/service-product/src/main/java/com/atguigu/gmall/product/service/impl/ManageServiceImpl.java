@@ -541,8 +541,6 @@ public class ManageServiceImpl implements ManageService {
             //  需要将所有的一级分类数据添加到集合
             jsonObjectList.add(category1);
         }
-
-
         return jsonObjectList;
     }
 

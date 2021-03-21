@@ -17,7 +17,15 @@
             <artifactId>service-product-client</artifactId>
             <version>1.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.atguigu.gmall</groupId>
+            <artifactId>service-activity-client</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
+
+
 
     <build>
         <finalName>service-cart</finalName>

@@ -1,7 +1,11 @@
 package com.atguigu.gmall.activity.service;
 
 import com.atguigu.gmall.model.activity.ActivityInfo;
+import com.atguigu.gmall.model.activity.ActivityRule;
 import com.atguigu.gmall.model.activity.ActivityRuleVo;
+import com.atguigu.gmall.model.cart.CarInfoVo;
+import com.atguigu.gmall.model.cart.CartInfo;
+import com.atguigu.gmall.model.order.OrderDetail;
 import com.atguigu.gmall.model.product.SkuInfo;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -22,4 +26,18 @@ public interface ActivityInfoService extends IService<ActivityInfo> {
     List<SkuInfo> findSkuInfoByKeyword(String keyword);
 
     Map<String, Object> findActivityRuleList(Long id);
+
+    //根据skuId找到活动规则
+    List<ActivityRule> findActivityRule(Long skuId);
+
+    //获取购物项对应的活动规则列表
+    List<CarInfoVo> findCartActivityRuleMap(List<CartInfo> cartInfoList,Map<Long,Long> skuIdToActivityIdMap);
+
+    /**
+     * key = activityId value = ActivityRule
+     * @param orderDetailList
+     * @return
+     */
+    Map<Long, ActivityRule> findTradeActivityRuleMap(List<OrderDetail> orderDetailList);
+
 }
