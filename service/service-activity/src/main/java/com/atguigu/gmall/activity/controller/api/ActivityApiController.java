@@ -44,7 +44,7 @@ public class ActivityApiController {
         /**
          1.  获取促销活动的： findActivityRule(Long skuId)
          2.  获取优惠券： findCouponInfo(Long skuId, Long activityId, Long userId)
-         activityId 如何获取? findActivityRule(Long skuId) 的返回值获取到！
+         3.activityId 如何获取? findActivityRule(Long skuId) 的返回值获取到！
         */
         Map<String,Object> map = activityService.findActivityAndCoupon(skuId,Long.parseLong(userId));
 
