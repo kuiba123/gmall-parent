@@ -31,6 +31,7 @@ public class CartController {
         request.setAttribute("skuInfo",skuInfo);
         request.setAttribute("skuNum",skuNum);
 
+        System.out.println("你好");
         //返回页面
         return "cart/addCart";
     }
